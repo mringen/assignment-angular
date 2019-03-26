@@ -1,0 +1,21 @@
+<div class="informationTravel">
+<app-book-travel
+  *ngFor="let travelInfo of information;"
+  [destination]="travelInfo.destination"
+  [route]="travelInfo.route"
+  (onSelected)="showTravel($event)"
+  [markedDestination]="comparePlaces(selectedDestionation, travelInfo)"
+  >
+</app-book-travel>
+<button (click)="reset()">Reset</button>
+
+<div *ngIf="!selectedDestionation">
+  Välj ett resemål.
+</div>
+
+<div *ngIf="selectedDestionation">
+  Ditt resemål: <span>{{ selectedDestionation.destination }}</span><br>
+  Bästa väg: <span>{{ selectedDestionation.route }}</span>
+</div>
+
+</div>

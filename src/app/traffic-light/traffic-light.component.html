@@ -1,0 +1,6 @@
+  <div class="trafficLight">
+    <button (click)="changeColor()"> Start traffic </button>
+    <div class="light" [ngClass]="{'redLight': state == 0 || state == 1}"></div>
+    <div class="light" [ngClass]="{'yellowLight': state == 1 || state == 3}"></div>
+    <div class="light" [ngClass]="{'greenLight': state == 2}"></div>
+  </div>

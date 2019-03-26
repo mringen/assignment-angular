@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+  margin: 0px;
+}
+.wrapper {
+  background-color: black;
+  margin: 0em;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.wrapperBody {
+  display: flex;
+  flex: 1;
+}
+header {
+  flex-direction: column;
+  background-color: lightblue;
+  width: auto;
+  height: 100px;
+}
+.projectName {
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+nav {
+flex: 12em 0 0
+}
+nav {
+  order: -1;
+  flex-direction: row;
+  background-color: lightgray;
+  border-right: solid black 1px;
+}
+main {
+  flex: 1;
+  text-align: left;
+  border-radius: 20px;
+  background-color: lightgray;
+  // border: solid black 1px;
+}
+.mainDiv {
+  background-color: blue;
+  // border: solid yellow 3px;
+  border-radius: 20px;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 25em;
+  width: 35em;
+
+}
+footer {
+  background-color: lightblue;
+  width: auto;
+  height: 100px;
+  // border: solid black 1px;
+}

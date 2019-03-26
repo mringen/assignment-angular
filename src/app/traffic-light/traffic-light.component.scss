@@ -1,0 +1,27 @@
+.trafficLight {
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  height: 20em;
+  width: 7em;
+}
+.light {
+  border: solid white 1px;
+  margin: 13px;
+  border-radius: 100%;
+  height: 5em;
+  width: 5em;
+}
+.redLight {
+  background-color: red;
+}
+.yellowLight {
+  background-color: yellow;
+}
+.greenLight {
+  background-color: green;
+}
+button {
+  margin-left: 20px;
+}
