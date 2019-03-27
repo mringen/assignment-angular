@@ -32,7 +32,7 @@ export class TravelInformationComponent implements OnInit {
 
 comparePlaces(x, y) {
   if( x && y ) {
-    // console.log('places: ', x, y, x === y, x.destination === y.destination && x.route === y.route);    
+    // console.log('places: ', x, y, x === y, x.destination === y.destination && x.route === y.route);
     return x.destination === y.destination && x.route === y.route;
   }
     return false;

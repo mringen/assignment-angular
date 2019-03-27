@@ -11,9 +11,11 @@ import { IBackpack } from '../ibackpack';
 export class PackBackpackComponent implements OnInit {
   @Input() iBackpack: IBackpack;
   @Input() packed: string = '';
+  checkHighLight: boolean = false;
 
   listService: ListService
   data: IBackpack[] = null;
+  selectedItems: IBackpack[] = [];
 
   constructor(listScervice: ListService) {
     this.listService = listScervice
@@ -31,4 +33,14 @@ export class PackBackpackComponent implements OnInit {
     this.data.splice(index, 1)
   }
 
+  highLight(item: IBackpack) {
+    if (!this.selectedItems.includes(item)) {
+      this.selectedItems.push(item);
+    } else {
+      let index = this.selectedItems.indexOf(item);
+      if(index >= 0)
+        this.selectedItems.splice(index, 1);
+    }
+    
+  }
 }

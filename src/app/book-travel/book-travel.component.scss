@@ -2,6 +2,9 @@ button {
   background-color: khaki;
   padding: 1em;
 }
+button:hover {
+  cursor: pointer;
+}
 .markedTab {
   background-color: blue;
 }

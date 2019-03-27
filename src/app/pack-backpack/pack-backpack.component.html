@@ -1,16 +1,16 @@
 <div class="packList">
 
   <div *ngFor="let stuff of data; index as i">
-    <li> {{ i+1 }} {{ stuff.packed }}</li> <button (click)="deleteItem(i)">Leave home</button>
+    <li (click)="highLight(stuff)"
+      [class.markedText]="selectedItems.includes(stuff)"
+      >
+      {{ i+1 }} {{ stuff.packed }}</li>
+
+    <button (click)="deleteItem(i)">Leave home</button>
   </div>
 
     <input [(ngModel)]="packed" placeholder="add to backpack"
     (keyup.enter)="addToBackpack()" />
     <button (click)="addToBackpack()">add....</button>
 
-
 </div>
-
-<!-- <app-check-list *ngFor="let stuff of data"
-  [iBackpack]="stuff">
-</app-check-list> -->

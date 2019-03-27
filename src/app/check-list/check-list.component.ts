@@ -8,7 +8,6 @@ import { IBackpack} from '../ibackpack';
 })
 export class CheckListComponent implements OnInit {
 
-  // @Input() iBackpack: IBackpack;
   constructor() { }
 
   ngOnInit() {
