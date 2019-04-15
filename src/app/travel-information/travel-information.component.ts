@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Idestination} from '../idestination';
 
 @Component({
@@ -30,9 +30,8 @@ export class TravelInformationComponent implements OnInit {
 
   selectedDestionation: Idestination = null;
 
-comparePlaces(x, y) {
+comparePlaces(x:any, y: any) {
   if( x && y ) {
-    // console.log('places: ', x, y, x === y, x.destination === y.destination && x.route === y.route);
     return x.destination === y.destination && x.route === y.route;
   }
     return false;
@@ -41,8 +40,7 @@ comparePlaces(x, y) {
 
   ngOnInit() { }
 
-  showTravel(idestination) {
-    console.log('showtravel', idestination, this.selectedDestionation)
+  showTravel(idestination: Idestination) {
     this.selectedDestionation = idestination;
   }
 

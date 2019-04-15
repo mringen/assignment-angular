@@ -8,7 +8,7 @@ import { TrafficLightComponent } from './traffic-light/traffic-light.component';
 import { BookTravelComponent } from './book-travel/book-travel.component';
 import { TravelInformationComponent } from './travel-information/travel-information.component';
 import { PackBackpackComponent } from './pack-backpack/pack-backpack.component';
-import { CheckListComponent } from './check-list/check-list.component';
+
 
 @NgModule({
   declarations: [
@@ -16,8 +16,7 @@ import { CheckListComponent } from './check-list/check-list.component';
     TrafficLightComponent,
     BookTravelComponent,
     TravelInformationComponent,
-    PackBackpackComponent,
-    CheckListComponent
+    PackBackpackComponent
   ],
   imports: [
     BrowserModule,

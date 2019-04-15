@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ListService } from '../list.service';
 import { IBackpack } from '../ibackpack';
 
@@ -11,7 +11,6 @@ import { IBackpack } from '../ibackpack';
 export class PackBackpackComponent implements OnInit {
   @Input() iBackpack: IBackpack;
   @Input() packed: string = '';
-  checkHighLight: boolean = false;
 
   listService: ListService
   data: IBackpack[] = null;
@@ -29,7 +28,7 @@ export class PackBackpackComponent implements OnInit {
     this.packed = '';
   }
 
-  deleteItem(index) {
+  deleteItem(index: number) {
     this.data.splice(index, 1)
   }
 
@@ -41,6 +40,5 @@ export class PackBackpackComponent implements OnInit {
       if(index >= 0)
         this.selectedItems.splice(index, 1);
     }
-    
   }
 }
